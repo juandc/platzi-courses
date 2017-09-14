@@ -1,0 +1,233 @@
+@import "./generic/keyframes.styl"
+
+body
+  font-family 'Varela Round', sans-serif
+  font-size 16px
+
+a
+  text-decoration none
+  
+figure
+  margin 0
+  
+img
+  vertical-align top
+
+ul
+  margin 0
+  padding 0
+.button-menu
+  position absolute
+  top 50%
+  left .5em
+  margin-top -10px
+  color gris_oscuro
+  
+.container
+  padding 1.4rem
+  font-size 0
+  text-align center
+
+.action
+  color white
+  margin-right .5em
+  font-size 1.2em
+  &:last-child
+    margin-right 0
+  &.gray
+    color gris_claro
+  
+.actions
+  position absolute
+  bottom 0
+  left 0
+  right 0
+  font-size 16px
+  background-color rgba(black, .6)
+  transition 1s background-color
+  transition .5s font-size
+  &:hover
+    font-size 18px
+    background-color rgba(black, .9)
+  
+.border-bottom
+  border-bottom 1px solid gris_claro
+  
+.name
+  color gris_oscuro
+
+.menu
+  display none
+
+.relative
+  position relative
+
+.author
+  color gris_claro
+
+.center-block
+  margin 0 auto
+
+.center-text
+  text-align center
+  
+.right-text
+  text-align right
+
+.padding
+  padding 1em
+
+.padding-tb
+  padding 1em 0
+  
+.left
+  float left
+  
+.right
+  float right
+  
+.wrap
+  width 1000px
+  
+.round
+  border-radius 50%
+  overflow hidden
+.progress
+  margin 1em 0
+  position relative
+  .min
+  .max
+    position absolute
+    font-size .8em
+    top -5px
+  .min
+    left 0
+    
+  .max
+    right 0
+    
+  .total
+    height 5px
+    background-color gris_claro
+    width 75%
+    margin 0 auto
+    border-radius 5px
+  .state
+    height 5px
+    background-color rojo
+    width 30%
+    border-radius 5px
+    position relative
+    animation 2400.10s state infinite linear
+  .circle
+    width 10px
+    height 10px
+    background-color gris_oscuro
+    border-radius 50%
+    position absolute
+    right 0
+    top -2px
+    animation 1s circle infinite linear
+
+.header
+  height 3.5em
+  .title
+    font-size 1.1em
+    text-align center
+    margin 0
+    line-height 3.5em
+  
+.song
+  display inline-block
+  font-size 1rem
+  margin-right 1em
+  margin-bottom 1em
+  width 8em
+  text-align left
+  :nth-chlid(even)
+    margin-right 0
+  p
+    margin .5em 0
+
+.playing
+  &.small
+    width 20em
+    margin 0 auto
+
+.input
+  border 1px solidgris_claro
+  height 2.5em
+  border-radius 5px
+  padding 0 1em 0 2em
+.search-icon
+  position absolute
+  left .5em
+  top .8em
+  color gris_claro
+.close-icon
+  position absolute
+  top .5em
+  color gris_claro
+  right .5em
+  font-size 1.2em
+.item
+  margin-left 0
+  color black
+  span
+    text-decoration none
+    transition 1s margin-left
+  &:hover
+    background-color gainsboro
+    span
+      transition 1s margin-left
+      margin-left 1em
+      color rojo
+      text-decoration underline
+    .right
+      text-decoration none
+      
+.icon-add,.icon-love,.icon-share
+  &:hover
+    color rojo
+    font-weight bolder
+.playlist, .logo
+  display none
+
+.playlist
+    display none
+    width 22em
+    padding 2em
+    border-left 1px solid gris_claro
+    .list
+      list-style none
+    .item
+      padding 1em 0
+    .action
+      font-size 14px
+.isotipo
+    width 122px
+    
+.logo
+  display none
+  padding 1.3em 0
+  overflow hidden
+  background-color white
+.avatar
+  width 38px
+  height 38px
+.username
+  color gris_claro
+  position relative
+  top 9px
+  margin-left .5em
+  &:after
+    content ""
+    border-left 7px solid transparent
+    border-top 9px solid gris_claro
+    border-right 7px solid transparent
+    display inline-block
+    margin-left .5em
+.a2a_button_google_plus_share
+  position absolute
+  right 0
+  top 1em

@@ -1,0 +1,35 @@
+section.playing.small.medium.large
+  .music.a2a_kit
+    figure.image.relative
+      img(width='320', src='img/songs/test.jpg', alt='Come Get It Bae Pharrel Williams')
+      .actions.padding.right-text
+        a.action.icon-add(href='')
+        a.action.icon-love(href='')
+        a.action.icon-share()
+    .padding
+      .progress
+        span.min 0:45
+        .total
+          .state
+            .circle
+        span.max 4:7
+      .description.center-text.border-bottom
+        p.name Come Get It Bae
+        p.author Pharrel Williams
+      .play.center-text.padding-tb
+        audio(id="sonido", src="/media/happy.mp3")
+        a.action.gray(style="margin:1em;" onclick="javascript:document.getElementById('sonido').pause();")
+          i.fa.fa-pause
+        a.action.gray.icon-play(style="margin:1em;" onclick="javascript:document.getElementById('sonido').play();")
+        a.action.gray.icon-vol(style="margin:1em;" onclick="javascript:document.getElementById('sonido').play();")
+        a.action.gray(style="margin:1em;" onclick="javascript:document.getElementById('sonido').pause();")
+          i.fa.fa-microphone-slash
+        // a.action.gray.icon-next(href='')
+        // a.action.gray.icon-random(href='')
+        // a.action.gray.icon-vol(href='')
+  .playlist.right
+    p.name G I R L
+    p.author Pharrel Williams
+    ul.list
+      each playlist in [1,2,3,4,5]
+        include ./playlist.jade

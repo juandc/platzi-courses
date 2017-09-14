@@ -1,0 +1,261 @@
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #f5f5f5;
+}
+
+header{
+    background-color: #273b47;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.logo{
+    margin-left: 1%;
+}
+
+nav{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    border-top: 5px solid rgba(0,0,0,0);
+    display: inline-block;
+    font-size: 1em;
+    position: relative;
+}
+
+nav ul li:hover{
+    border-top: 5px solid #FF4136;
+}
+
+nav ul li:before{
+    height: 1.5em;
+    border-right: 1px solid #fff;
+    content: '';
+    position: absolute;
+    top: 13px;
+    right: 0;
+}
+
+nav ul li.active{
+    border-top: 5px solid #7dcd40;
+}
+
+nav ul li:last-child{
+    border-top: none;
+}
+
+nav ul li:last-child:before{
+    border-right: none;
+}
+
+nav ul li:last-child a{
+    background-color: #FF4842;
+    padding: 10px 20px;
+    border-radius: 3px;
+    border-bottom: 3px solid #D0272A;
+    margin: 0 20px;
+}
+
+nav ul li:last-child a:hover{
+    background-color: #7dcd40;
+    border-bottom: 3px solid #339966;
+}
+
+nav ul li a{
+    color: #fff;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+
+
+section{
+    position: relative;
+    top: 80px;
+    z-index: -1;
+}
+
+.posts{
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 95%;
+    max-width: 1000px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.post{
+    width: 31.7%;
+    height: 100%;
+    max-height: 100%;
+    margin-bottom: 15px;
+}
+
+.inside{
+    position: relative;
+}
+
+.inside h2{
+    color: #515151;
+    margin-top: 4%;
+    cursor: pointer;
+}
+
+.inside .img{
+    margin: 0;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.inside .img img{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.inside.bottom{
+    border-top: 1px solid gray;
+}
+
+.inside.bottom p{
+    display: inline-block;
+    color: gray;
+    font-size: 12px;
+}
+
+.inside.bottom p:last-child{
+    float: right;
+}
+
+.post .if_first{
+    display: none;
+}
+
+.post:first-child{
+    width: 100vw;
+    height: auto;
+    background-color: rgba(255,255,255,0.8);;
+    position: relative;
+}
+
+.post:first-child .inside .img{
+    height: auto;
+    min-height: 300px;
+    max-height: 560px;
+    position: relative;
+}
+
+.post:first-child .inside h2, .post:first-child .inside.bottom{
+    display: none;
+}
+
+.post:first-child .if_first{
+    display: block;
+    position: absolute;
+    bottom: 10%;
+    left: 2%;
+    width: 50%;
+    background-color: rgba(255,255,255,0.8);
+    padding: 10px 20px;
+    color: #515151;
+}
+
+.post:first-child .if_first .bot{
+    border-top: 1px solid lightgray;
+}
+
+.post:first-child .if_first .bot .img{
+    padding: 0;
+    margin: 1%;
+    display: inline-block;
+    width: 40px;
+}
+
+.post:first-child .if_first .bot .img img{
+    border-radius: 50%;
+}
+
+.post:first-child .if_first .bot p{
+    display: inline-block;
+}
+
+.post:first-child .if_first .bot p:last-child{
+    float: right;
+}
+
+@media screen and (max-width: 1000px){
+    .posts{
+        justify-content: space-around;
+    }
+
+    .post{
+        height: 100%;
+        width: 40%;
+    }
+
+    .post:first-child{
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .post{
+        height: 100%;
+        width: 60%;
+    }
+}
+
+footer{
+    position: relative;
+    text-align: center;
+    top: 80px;
+    margin: 50px auto;
+    max-width: 1000px;
+    font-family: 'Montserrat';
+}
+
+footer div{
+    display: inline-block;
+}
+
+footer a{
+    color: #666;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    background-color: #eaeaea;
+    font-weight: bold;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.num a, .num .active{
+    background-color: #f5f5f5;
+    border: none;
+}

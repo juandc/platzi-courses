@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.back {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-image: url("http://wallpaper.ultradownloads.com.br/118799_Papel-de-Parede-Tunel-do-Tempo_2560x1440.jpg");
+  -webkit-background-image: url("http://wallpaper.ultradownloads.com.br/118799_Papel-de-Parede-Tunel-do-Tempo_2560x1440.jpg");
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 1s;
+  background-size: 190vh;
+  background-position: center;
+}
+
+.pivot {
+  margin: 0 auto;
+  position: relative;
+  border-radius: 50%;
+  height: 350px;
+  width: 350px;
+  opacity: 0;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s;
+  -webkit-transform: rotate(50deg);
+  transform: rotate(50deg);
+}
+
+.back:hover {
+  background-size: 2000vh;
+  border: 20px solid white;
+}
+
+.back:hover .pivot {
+  opacity: 1;
+  -webkit-transform: rotate(720deg);
+  transform: rotate(720deg);
+  background: white;
+}
+
+.pivot img{
+    height: 100%;
+    width: 100%;
+}

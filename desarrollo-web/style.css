@@ -1,0 +1,474 @@
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #f5f5f5;
+    width: 100vw;
+}
+
+header{
+    background-color: #273b47;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 55px;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.logo{
+    margin-left: 1%;
+}
+
+nav{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    border-top: 5px solid rgba(0,0,0,0);
+    display: inline-block;
+    font-size: 1em;
+    position: relative;
+}
+
+nav ul li:hover{
+    border-top: 5px solid #FF4136;
+}
+
+nav ul li:before{
+    height: 1.5em;
+    border-right: 1px solid #fff;
+    content: '';
+    position: absolute;
+    top: 13px;
+    right: 0;
+}
+
+nav ul li.active{
+    border-top: 5px solid #7dcd40;
+}
+
+nav ul li:last-child{
+    border-top: none;
+}
+
+nav ul li:last-child:before{
+    border-right: none;
+}
+
+nav ul li:last-child a{
+    background-color: #FF4842;
+    padding: 10px 20px;
+    border-radius: 3px;
+    border-bottom: 3px solid #D0272A;
+    margin: 0 20px;
+}
+
+nav ul li:last-child a:hover{
+    background-color: #7dcd40;
+    border-bottom: 3px solid #339966;
+}
+
+nav ul li a{
+    color: #fff;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+
+
+
+section{
+    z-index: -1;
+}
+
+section.one{
+    position: relative;
+    color: white;
+    top: 39px;
+    background-image: url(https://static.platzi.com/media/courses/carrera-frontend_cover.jpg);
+    background-size: cover;
+    background-position: center;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    padding: 50px 0;
+    width: 100vw;
+    min-height: 263px;
+    height: auto;
+    margin-right: -100px;
+    margin-bottom: 80px;
+}
+
+section.one .container{
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 0 40px;
+    position: relative;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+section.one .content{}
+
+section.one .content:first-child{
+    width: 60%;
+}
+
+section.one .content:first-child .con{
+    margin-top: -15px;
+}
+
+section.one .content:first-child h1{
+    font-size: 30px;
+    display: block;
+}
+
+section.one .content:first-child .logo{}
+
+
+section.one .content:first-child img{
+    display: block;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+section.one .content:first-child p{
+    display: block;
+    margin: 18px 0;
+}
+
+section.one .content:first-child a{
+    background-color: #7fc719;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 4px solid #598C12;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    float: left;
+    display: inline-block;
+    
+}
+
+section.one .content:last-child{
+    width: 40%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+}
+
+section.one .content:last-child iframe{
+    margin-top: 20px;
+}
+
+
+
+section.two{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 100px;
+    background-color: #f8f8f9;
+}
+
+section.two .container{
+    text-align: center;
+}
+
+section.two .container h2{
+    color: #1F313C;
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+    width: 100%;
+}
+
+section.two .container:first-child{
+}
+
+section.two .container:first-child .content ul{
+    display: inline-block;
+    width: 95px;
+    vertical-align: top;
+    margin-bottom: 30px;
+    position: relative;
+    top: 0;
+}
+
+section.two .container:first-child .content ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+
+
+
+section.two .container .content:last-child{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-around;
+    -ms-align-items: center;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+section.two .container .content:last-child ul{
+    list-style: none;
+    text-align: left;
+    width: 31.7%;
+    height: 250px;
+}
+
+section.two .container .content:last-child ul li:before{
+    content: '•';
+    background: -webkit-linear-gradient(#fe344e, #ff7250);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 12px;
+    font-size: 25px;
+    border-radius: 50%;
+    font-weight: bold;
+    /*background-color: red;*/
+}
+
+
+
+section.three{
+    position: relative;
+    width: 100%;
+    margin-bottom: 55%;
+}
+
+section.three img{
+    width: 50%;
+    float: left;
+}
+
+section.three .content{
+    padding: 10px 40px 10px 53%;
+    float: right;
+    position: relative;
+    margin-top: -340px;
+}
+
+section.three .content h2{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+section.three .content p{
+    margin: 40px auto 30px;
+}
+
+section.three .content a{
+    color: red;
+    font-size: 20px;
+}
+
+section.three .prof{
+    position: absolute;
+    margin-top: 35%;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+section.three .prof h2{
+    font-size: 33px;
+}
+
+section.three .prof .des{
+    margin: 0 auto;
+    line-height: 25px;
+    width: 510px;
+    vertical-align: middle;
+    text-align: left;
+}
+
+section.three .prof .des img{
+    border-radius: 50%;
+    width: 150px;
+    float: left;
+    margin-left: 80px;
+    margin-right: 25px;
+}
+
+section.three .prof .des h3{
+    padding-top: 12px;
+    font-size: 20px;
+    font-size: bold;
+}
+
+section.three .prof .des a{
+    text-decoration: none;
+    color: red;
+}
+
+
+
+section.four{
+    max-width: 1000px;
+    background-color: #f8f8f9;
+    text-align: center;
+    position: relative;
+    top: 30%;
+    margin: 0 auto;
+}
+
+section.four h2{
+    width: 100%;
+    padding-top: 50px;
+    font-size: 28px;
+}
+
+section.four .content{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-around;
+    -ms-align-items: center;
+    align-items: center;
+    width: 0 auto;
+}
+
+section.four .content ul{
+    list-style: none;
+    width: 333px;
+}
+
+section.four .content ul img{
+    border-radius: 50%;
+    width: 70px;
+}
+
+section.four a{
+    color: red;
+}
+
+section.four a:hover{
+    color: lightgreen;
+}
+
+section.four .content a{
+    text-decoration: none;
+    font-size: 18px;
+}
+
+section.four a.more{
+    padding: 40px 0 40px;
+    padding-top: 40px;
+    font-size: 20px;
+}
+
+section.retos{
+    padding-top: 50px;
+    text-align: center;
+}
+
+section.retos ul{
+    list-style: none;
+}
+
+section.four ul li img{
+    border-radius: 50%;
+}
+
+
+footer{
+    margin-top: 50px;
+    height: 150px;
+    background: #273b47;
+    color: #fff;
+    padding: 50px 100px;
+}
+
+footer .content{
+    width: 40%;
+}
+
+footer .content p{
+    margin-bottom: 30px;
+}
+
+footer .content a{
+    background-color: #7fc719;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 4px solid #598C12;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+footer .content:first-child{
+    float: left;
+}
+
+footer .content:last-child{
+    float: right;
+}
+
+footer .content:last-child nav ul li:before{
+    height: 1.5em;
+    border-left: 1px solid #fff;
+    border-right: none;
+    content: '';
+    position: absolute;
+    top: 13px;
+    right: 0;
+}
+
+footer .content:last-child nav ul li{
+    display: block;
+}
+
+@media screen and (max-width: 1000px){
+    section.three{
+        top: 100px;
+        margin-bottom: 80%;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    section.three{
+        margin-bottom: 70%;
+    }
+}

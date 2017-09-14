@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a id="small-b">Add!</a>
+                </li>
+            </ul>
+        <img src="https://static.platzi.com/media/achievements/desarrollo2x.png" alt="">
+        </nav>
+    </header>
+
+    <section>
+        <h1>Sticky Footer</h1>
+    </section>
+
+    <footer>
+        <div class="con">
+            <h2>Sticky Footer</h2>
+            <h4>Este es un ejemplo de un estilo de footers llamado stycky footer.</h4>
+            <h4>Este footer consiste en que el footer se encuentre al final de la pantalla, incluyendo cuando el contenido no alcanza a llenarla toda!</h4>
+        </div>
+    </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+    $("#small-b").on("click", function() {
+      $("<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, deserunt, error! Soluta beatae non, autem rem dolor molestias impedit earum.</p>").appendTo("section");
+    });
+</script>
+</body>
+</html>

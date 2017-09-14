@@ -1,0 +1,67 @@
+script(src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.7/hammer.min.js")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.2/blazy.min.js")
+script
+  :coffee-script
+    consulta = window.matchMedia('(max-width: 800px)')
+
+    toggleMenu = ->
+      $menu.classList.toggle 'active'
+      return
+
+    showMenu = ->
+      $menu.classList.add 'active'
+      $burguerButton.classList.add 'icon-close'
+      return
+
+    hideMenu = ->
+      $menu.classList.remove 'active'
+      $burguerButton.classList.remove 'icon-close'
+      return
+
+    mediaQuery = ->
+      if consulta.matches
+        console.log 'se cumplió la condicion'
+        $burguerButton.addEventListener 'touchstart', toggleMenu
+      else
+        $burguerButton.removeEventListener 'touchstart', toggleMenu
+        console.log 'no se cumplió la condicion'
+      return
+
+    consulta.addListener mediaQuery
+
+    $burguerButton = document.getElementById('burguer-button')
+
+    $menu = document.getElementById('menu')
+    mediaQuery()
+
+
+    # LAZY LOADING
+    bLazy = new Blazy(
+      selector: 'img'
+      breakpoints: [ {
+        width: 420
+        src: 'data-src-small'
+      } ]
+      success: (element) ->
+        setTimeout (->
+          parent = element.parentNode
+          parent.className = parent.className.replace(/\bloading\b/, '')
+          return
+        ), 200
+        return
+    )
+
+    # $burguerButton.addEventListener('touchstart', toggleMenu);
+
+    # toggleMenu = ->
+    #   $menu.classList.toggle 'active'
+
+
+    # GESTOS TOUCH
+    $body = document.body
+
+    gestos = new Hammer($body)
+
+    gestos.on 'swiperight', showMenu
+
+    gestos.on 'swipeleft', hideMenu

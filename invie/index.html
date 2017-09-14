@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><title>Invie | Guitarras invisibles</title><link rel="shortcut icon" type="image/x-icon" href="http://icons.iconarchive.com/icons/flat-icons.com/flat/512/Guitar-icon.png"><link rel="stylesheet" href="css/style.css"></head><body><section id="portada" class="portada background"><header id="header" class="header contenedor"><figure class="logotipo"><img src="images/invie.png" srcset="images/invie.png 1x, images/invie2x.png 2x" width="186" height="60" alt="Invie - Logotipo"></figure><span id="burguer-button" class="burguer-button icon-menu"></span><nav id="menu" class="menu"><ul><li><a href="/">Home</a></li><li><a href="/#guitarras">Guitarras</a></li><li><a href="precios.html">Precios</a></li></ul></nav></header><div class="titulos contenedor"><h1 class="titulo1">Guitarras <span>invie</span>sibles</h1><h3 class="titulo2">Sé la estrella de rock que siempre imaginaste ser</h3><div class="button-container"><a href="/#guitarras" class="button">Guitarras</a></div></div></section><section id="guitarras" class="guitarras contenedor"><h2>Nuestras guitarras</h2><div class="videos"><div class="video-contenedor"><iframe width="560" height="315" src="https://www.youtube.com/embed/qqZojEcpKWg" frameborder="0" allowfullscreen class="video"></iframe></div></div><article class="guitarra a"><img data-src="./images/invie-acustica.png|images/invie-acustica2x.png" alt="Guitarra Invie Acustica" class="right b-lazy square"><div class="content-guitarra-a"><h3 class="titulo3">Invie Acustica</h3><ol><li>Estilo vintage</li><li>Madera pura</li><li>Incluye estuche inviesible de aluminio</li></ol></div></article><article class="guitarra b"><img data-src="images/invie-classic.png|images/invie-classic2x.png" height="" width="250" alt="Guitarra Invie Classic" class="left b-lazy"><div class="content-guitarra-b"><h3 class="titulo3 last">Invie Rock</h3><ol><li>Estilo vintage</li><li>Pesada</li><li>Inicia tu camino como Rockstar</li></ol></div></article><article class="guitarra c"><img data-src="images/invie-rock.png|images/invie-rock2x.png" height="" width="" alt="Guitarra Invie Rock" class="right large b-lazy"><div class="content-guitarra-c"><h3 class="titulo3 last">Invie Classic</h3><ol><li>Estilo vintage</li><li>Liviana</li><li>Color madera claro y oscuro</li></ol></div></article></section><footer class="footer"><div class="footer-content"><div class="contacto"><figure><img data-src="./images/invie-white.png|./images/invie-white2x.png" alt="Logotipo blanco" class="b-lazy"></figure><div class="contact"><div class="tel"><a href="tel:+573591811"><div style="display:inline-block;" class="icon-phone"></div><strong>Tel:</strong><span>3591811</span></a></div><div class="e-mail"><a target="_blanck" href="https://mail.google.com/mail/u/0/?view=cm&amp;fs=1&amp;tf=1&amp;source=mailto&amp;to=jdc@invie.com"><div style="display:inline-block;" class="icon-envelope"></div><strong>Email:</strong><span>jdc@invie.co</span></a></div></div></div><form class="formulario"><div class="col1"><div class="perinfo"><div class="name"><label for="name">Name:</label><input id="name" type="text" required="" placeholder="Tu nombre" name="name"></div><div class="mail"><label for="mail">Email:</label><input id="mail" type="email" required="" placeholder="Tu email" name="mail"></div></div><div class="client"><div class="hombre"><label for="hombre"><input id="hombre" type="radio" checked="" value="Hombre" name="sexo"> Hombre</label></div><div class="mujer"><label for="mujer"><input id="mujer" type="radio" value="Mujer" name="sexo"> Mujer</label></div></div><div class="intereses"><div class="in1"><label for="cotización"><input type="checkbox" checked="" name="intereses" value="cotizacion" id="cotización"> Cotización</label><label for="reclamos"><input id="reclamos" type="checkbox" name="intereses" value="reclamos"> Reclamos</label></div><div class="in2"><label for="comentarios"><input id="comentarios" type="checkbox" name="intereses" value="comentarios"> Comentarios</label><label for="otros"><input id="otros" type="checkbox" name="intereses" value="otros"> Otros</label></div></div></div><div class="col2"><label for="comentario">Comentarios:</label><textarea id="comentario" name="comentario" cols="25" rows="7"></textarea><div class="button-container"><input type="submit" value="Enviar" class="button"></div></div></form></div></footer><script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.7/hammer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.2/blazy.min.js"></script><script>(function() {
+  var $body, $burguerButton, $menu, bLazy, consulta, gestos, hideMenu, mediaQuery, showMenu, toggleMenu;
+
+  consulta = window.matchMedia('(max-width: 800px)');
+
+  toggleMenu = function() {
+    $menu.classList.toggle('active');
+  };
+
+  showMenu = function() {
+    $menu.classList.add('active');
+    $burguerButton.classList.add('icon-close');
+  };
+
+  hideMenu = function() {
+    $menu.classList.remove('active');
+    $burguerButton.classList.remove('icon-close');
+  };
+
+  mediaQuery = function() {
+    if (consulta.matches) {
+      console.log('se cumplió la condicion');
+      $burguerButton.addEventListener('touchstart', toggleMenu);
+    } else {
+      $burguerButton.removeEventListener('touchstart', toggleMenu);
+      console.log('no se cumplió la condicion');
+    }
+  };
+
+  consulta.addListener(mediaQuery);
+
+  $burguerButton = document.getElementById('burguer-button');
+
+  $menu = document.getElementById('menu');
+
+  mediaQuery();
+
+  bLazy = new Blazy({
+    selector: 'img',
+    breakpoints: [
+      {
+        width: 420,
+        src: 'data-src-small'
+      }
+    ],
+    success: function(element) {
+      setTimeout((function() {
+        var parent;
+        parent = element.parentNode;
+        parent.className = parent.className.replace(/\bloading\b/, '');
+      }), 200);
+    }
+  });
+
+  $body = document.body;
+
+  gestos = new Hammer($body);
+
+  gestos.on('swiperight', showMenu);
+
+  gestos.on('swipeleft', hideMenu);
+
+}).call(this);
+</script></body></html>

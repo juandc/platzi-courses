@@ -1,0 +1,54 @@
+footer.footer
+  .footer-content
+    .contacto
+      figure
+        img(class="b-lazy" data-src='./images/invie-white.png|./images/invie-white2x.png', alt='Logotipo blanco')
+      .contact
+        .tel
+          a(href='tel:+573591811')
+            .icon-phone(style="display:inline-block;")
+            strong Tel:
+            span 3591811
+        .e-mail
+          a(target='_blanck', href='https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=jdc@invie.com')
+            .icon-envelope(style="display:inline-block;")
+            strong Email:
+            span jdc@invie.co
+    form.formulario
+      .col1
+        .perinfo
+          .name
+            label(for='name') Name:
+            input#name(type='text', required='', placeholder='Tu nombre', name='name')
+          .mail
+            label(for='mail') Email:
+            input#mail(type='email', required='', placeholder='Tu email', name='mail')
+        .client
+          .hombre
+            label(for='hombre')
+              input#hombre(type='radio', checked='', value='Hombre', name='sexo')
+              |  Hombre
+          .mujer
+            label(for='mujer')
+              input#mujer(type='radio', value='Mujer', name='sexo')
+              |  Mujer
+        .intereses
+          .in1
+            label(for='cotización')
+              input(type='checkbox', checked='', name='intereses', value='cotizacion', id='cotización')
+              |  Cotización
+            label(for='reclamos')
+              input#reclamos(type='checkbox', name='intereses', value='reclamos')
+              |  Reclamos
+          .in2
+            label(for='comentarios')
+              input#comentarios(type='checkbox', name='intereses', value='comentarios')
+              |  Comentarios
+            label(for='otros')
+              input#otros(type='checkbox', name='intereses', value='otros')
+              |  Otros
+      .col2
+        label(for='comentario') Comentarios:
+        textarea#comentario(name='comentario', cols='25', rows='7')
+        .button-container
+          input.button(type='submit', value='Enviar')

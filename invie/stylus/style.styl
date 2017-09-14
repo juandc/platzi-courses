@@ -1,0 +1,548 @@
+@import fonts
+
+// VARS //
+
+flex()
+  display -webkit-flex
+  display -moz-flex
+  display -ms-flex
+  display -o-flex
+  display flex
+
+
+// GENERAL //
+
+body
+  background-color: #FAFAFF
+  font-family 'Allerta', sans-serif
+  margin 0
+  width 100%
+  height auto
+  overflow-x hidden
+
+.contenedor
+  max-width 95%
+  width auto
+  margin auto
+  position relative
+
+.background
+  background-color #3A5769
+  background-image url('../images/background.png')
+  -webkit-background-size cover
+  background-size cover
+
+.b-lazy
+  -webkit-transition opacity 1s ease-in-out
+  -moz-transition opacity 1s ease-in-out
+  -o-transition opacity 1s ease-in-out
+  transition opacity 1s ease-in-out
+  max-width 100%
+  opacity 0
+.b-loaded
+  opacity 1
+
+
+// CONTENT //
+
+.portada
+  color white
+  padding 20px
+  cursor default
+  height auto
+  figure
+    flex()
+    width 100%
+    img
+      margin 0 auto
+      padding-right 80px
+  .burguer-button
+    position fixed
+    color white
+    border-radius 50%
+    width 40px
+    line-height 40px
+    height 40px
+    background-color #3A5769
+    display inline-block
+    text-align center
+    cursor pointer
+    position fixed
+    left 13px
+    top 21px
+    z-index 3
+  .menu
+    position fixed
+    top 0
+    right 0
+    bottom 0
+    left -100%
+    width 100%
+    font-size 25px
+    background-color rgba(255, 59, 78, .9)
+    flex()
+    align-items center
+    z-index 2
+    transition .5s
+    &.active
+      left 0
+    ul
+      margin 0
+      padding 5px
+      width 100%
+      list-style none
+      li
+        border-bottom 3px solid white
+        line-height 50px
+        text-align center
+        &:first-child
+          border-top 3px solid white
+        a
+          color white
+          text-decoration none
+  .titulos
+    text-align center
+    .titulo1
+      font-size 35px
+      font-family 'Montserrat', sans-serif
+      span
+        background -webkit-gradient(linear, left top, left bottom, from(#ff7250), to(#fe344e))
+        -webkit-background-clip text
+        -webkit-text-fill-color transparent
+        font-size 37px
+    .titulo2
+      position relative
+      top -15px
+      font-size 18px
+      margin 0
+    .button-container
+      flex()
+      align-items center
+      width 100%
+      a
+        padding 8px 10px
+        position relative
+        background-color #FD324E
+        background linear-gradient(to left, #fe344e, #ff7250)
+        border-radius 18px
+        font-family 'Montserrat', sans-serif
+        font-weight bold
+        text-transform uppercase
+        text-decoration none
+        color white
+        margin 0 auto
+        width 80%
+
+.guitarras
+  color #1F313C
+  text-align center
+  h2
+    text-align center
+    font-family 'Montserrat', sans-serif
+    font-size 35px
+  .videos
+    margin 0 auto
+    margin-bottom 20px
+    .video-contenedor
+      position relative
+      padding-top 56.4%
+      .video
+        margin 0 auto
+        position absolute
+        top 0
+        right 0
+        bottom 0
+        left 0
+        width 95%
+        height 95%
+        border 2px solid black
+  .guitarra
+    margin 0 auto
+    border 1px solid #1F313C
+    border-radius 10px
+    padding 10px
+    margin-bottom 30px
+    &:last-child
+      margin-bottom 40px
+    img
+      max-width 250px
+      width 100%
+      &.large
+        height 280px
+    .titulo3
+      font-size 30px
+      margin 0
+    ol
+      list-style none
+      padding 0
+
+.tabla
+  margin 50px 0
+  .table-content
+    overflow auto
+    border 1px solid #273b47
+    margin 0 auto
+    table
+      width 95%
+    td
+      padding 10px 20px
+    th
+      padding 10px 20px
+      background-color #273b47
+      color white
+      text-align left
+    table
+    td
+    th
+      border 1px solid #273b47
+      border-collapse collapse
+
+footer
+  background-color #1F313C
+  padding 20px 10px 30px
+  color white
+  .footer-content
+    position relative
+    width 95%
+    margin 0 auto
+    display block
+    overflow hidden
+    .contacto
+      flex()
+      -webkit-flex-wrap wrap
+      -moz-flex-wrap wrap
+      -ms-flex-wrap wrap
+      flex-wrap wrap
+      align-items flex-start
+      width 300px
+      margin 0 auto
+      img
+        display block
+      a
+        color white
+        text-decoration none
+        margin 10px 50px 10px 0px
+      strong
+        display block
+    .formulario
+      display block
+      width 300px
+      margin 0 auto
+      .col1
+        margin 0
+        margin-top 5px
+        .client
+        .intereses
+          margin 20px 0
+      .col2
+        margin 0
+        max-width 100%
+        .button-container
+          flex()
+          align-items center
+          width 95%
+          .button
+            margin 0 auto
+            margin-top 15px
+            padding 10px
+            position relative
+            width 80%
+            background-color #FD324E
+            background linear-gradient(to left, #fe344e, #ff7250)
+            color white
+            border none
+            border-radius 18px
+            font-family 'Montserrat', sans-serif
+            font-size 16px
+            // font-weight bold
+            text-transform uppercase
+            text-decoration none
+      label
+        display block
+        font-size 20px
+        margin-bottom 10px
+      input[type="text"]
+      input[type="email"]
+        font-size 16px
+        padding 5px
+        width 95%
+      input[type="text"]
+        margin-bottom 10px
+      input[type="radio"]
+      input[type="checkbox"]
+        zoom: 1.5
+      textarea
+        margin-top 10px
+        display block
+        width 100%
+
+
+// Media //
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 2)
+  .background
+    background-image url('../images/background2x.png')
+
+
+@media screen and (min-width: 487px)
+  .contenedor
+    width 90%
+
+  .portada
+    .titulos
+      .titulo1
+        font-size 40px
+        span
+          font-size 42px
+      .titulo2
+        font-size 19px
+        font-weight normal
+        padding 0 50px
+      .button-container
+        a
+          width 60%
+
+  .guitarras
+    h2
+      font-size 45px
+    .guitarra
+      img
+        max-width 300px
+        width 100%
+      .titulo3
+        font-size 40px
+      ol
+        font-size 18px
+
+@media screen and (min-width: 768px)
+  .contenedor
+    width 80%
+  .portada
+    .burguer-button
+      width 50px
+      line-height 50px
+      height 50px
+      font-size 20px
+    .menu
+      width 75%
+      transition .8s
+    .titulos
+      .titulo1
+        font-size 50px
+        span
+          font-size 53px
+      .titulo2
+        font-size 25px
+        padding 0 100px
+      .button-container
+        a
+          width 40%
+          font-size 19px
+          font-weight normal
+  .guitarras
+    h2
+      font-size 50px
+    .guitarra
+      img
+        max-width 500px
+        &.large
+          height 500px
+          width 350px
+      .titulo3
+        font-size 48px
+      ol
+        font-size 20px
+  footer
+    padding 50px
+    .footer-content
+      flex()
+      flex-wrap wrap
+      position relative
+      left 0
+      right 0
+      width 100%
+      .contacto
+        width 65%
+        margin-bottom 30px
+        figure
+          flex()
+          width 100%
+          img
+            margin 0 auto
+            padding 0
+        .contact
+          flex()
+          width 40%
+          margin 0 auto
+          .tel
+          .e-mail
+            width 50%
+            &:first-child
+              margin-left -20px
+            a
+              font-size 20px
+      .formulario
+        width 65%
+        .col1
+          width 100%
+          position relative
+          .perinfo
+            flex()
+            .name
+              margin-right 10px
+              width 100%
+            .mail
+              width 100%
+              margin-left 10px
+            input[type="text"]
+            input[type="email"]
+              width 100%
+          .client
+            flex()
+            .hombre
+            .mujer
+              width 100%
+          .intereses
+            flex()
+            flex-wrap wrap
+            width 100%
+            .in1
+            .in2
+              width 50%
+            label
+              margin-right 50px
+        .col2
+          .button-container
+            width 50%
+            margin 0 auto
+
+@media screen and (min-width: 1000px)
+  .contenedor
+    max-width 900px
+    width 900px
+  .portada
+    .header
+      flex()
+    figure
+      width 0
+      position relative
+    .menu
+      position relative
+      background none
+      right 0
+      left 50%
+      width auto
+      transition none
+      &.active
+        left 50%
+      ul
+        li
+          border none
+          padding-right 30px
+          display inline-block
+          &:first-child
+            border none
+          &:before
+            content '*'
+    .titulos
+      display block
+      width 100%
+      position relative
+      text-align left
+      margin 100px auto
+      .titulo1
+        font-size 60px
+        span
+          font-size 64px
+      .titulo2
+        padding 0
+      .button-container
+        a
+          width auto
+          border-radius 12px
+          margin 0
+
+  .burguer-button
+    display none !important
+
+  .guitarras
+    h2
+      text-align left
+      font-size 40px
+    .videos
+      margin-bottom -50px
+      .video-contenedor
+        height 0
+        .video
+          max-width 600px
+          height 350px
+    .guitarra
+      position relative
+      height 250px
+      text-align left
+      .content-guitarra-a
+      .content-guitarra-b
+      .content-guitarra-c
+        float left
+        margin-top 40px
+        padding-left 50px
+      .content-guitarra-b
+        float right
+        margin -20px 40px
+      ol
+        list-style decimal
+      .left
+        float left
+        width 350px
+        margin-left 25px
+        position relative
+        bottom -10px
+      .right
+        float right
+        width 300px
+        position relative
+        top -82px
+        &.large
+          position relative
+          height 320px
+          width 250px
+          top -10px
+          right 100px
+      img
+        // width 200px
+
+  .tabla
+    .table-content
+      width 800px
+
+  footer
+    .footer-content
+      flex-wrap no-wrap
+      width 80%
+      .contacto
+        width 50%
+        figure
+          img
+            margin 0
+            margin-left -40px
+        .contact
+          margin 0
+          position relative
+          top -100px
+          .tel
+          .email
+            &:first-child
+              margin-left 0
+      .formulario
+        width 50%
+        .col1
+          width 100%
+          .intereses
+            display block
+            .in1
+            .in2
+              width 100%
+        a
+          position relative
+// @media screen and (min-width: 908)

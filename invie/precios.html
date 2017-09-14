@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Precios | Invie - Tus mejores</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://icons.iconarchive.com/icons/flat-icons.com/flat/512/Guitar-icon.png">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <section id="portada" class="portada background">
+      <header id="header" class="header contenedor">
+        <figure class="logotipo"><img src="images/invie.png" srcset="images/invie.png 1x, images/invie2x.png 2x" width="186" height="60" alt="Invie - Logotipo"></figure><span id="burguer-button" class="burguer-button icon-menu"></span>
+        <nav id="menu" class="menu">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#guitarras">Guitarras</a></li>
+            <li><a href="precios.html">Precios</a></li>
+          </ul>
+        </nav>
+      </header>
+    </section>
+    <section class="tabla">
+      <div class="contenedor table-content">
+        <table>
+          <thead>
+            <tr>
+              <th>Modelo</th>
+              <th>Precio</th>
+              <th>Colores</th>
+              <th>Descripción</th>
+              <th>Material</th>
+              <th>Dificultad</th>
+              <th>Guitarras Disponibles</th>
+            </tr>
+          </thead>
+          <thead>
+            <tr>
+              <td>Invie Acustica</td>
+              <td>$150</td>
+              <td>Madera claro</td>
+              <td>Una guitarra muy <i>Acustica</i></td>
+              <td>Madera</td>
+              <td>Intermedio</td>
+              <td>Todas</td>
+            </tr>
+            <tr>
+              <td>Invie Classic</td>
+              <td>$200</td>
+              <td>Madera claro y oscuro</td>
+              <td>Una guitarra muy <i>Classica</i></td>
+              <td>Madera</td>
+              <td>Intermedio</td>
+              <td>Todas</td>
+            </tr>
+            <tr>
+              <td>Invie Rock</td>
+              <td>$250</td>
+              <td>Negra, blanca, Azúl y Rojo</td>
+              <td>Una guitarra muy <i>Roquera</i></td>
+              <td>Madera</td>
+              <td>Difícil</td>
+              <td>50% Aprox</td>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="contacto">
+          <figure><img data-src="./images/invie-white.png|./images/invie-white2x.png" alt="Logotipo blanco" class="b-lazy"></figure>
+          <div class="contact">
+            <div class="tel"><a href="tel:+573591811">
+                <div style="display:inline-block;" class="icon-phone"></div><strong>Tel:</strong><span>3591811</span></a></div>
+            <div class="e-mail"><a target="_blanck" href="https://mail.google.com/mail/u/0/?view=cm&amp;fs=1&amp;tf=1&amp;source=mailto&amp;to=jdc@invie.com">
+                <div style="display:inline-block;" class="icon-envelope"></div><strong>Email:</strong><span>jdc@invie.co</span></a></div>
+          </div>
+        </div>
+        <form class="formulario">
+          <div class="col1">
+            <div class="perinfo">
+              <div class="name">
+                <label for="name">Name:</label>
+                <input id="name" type="text" required="" placeholder="Tu nombre" name="name">
+              </div>
+              <div class="mail">
+                <label for="mail">Email:</label>
+                <input id="mail" type="email" required="" placeholder="Tu email" name="mail">
+              </div>
+            </div>
+            <div class="client">
+              <div class="hombre">
+                <label for="hombre">
+                  <input id="hombre" type="radio" checked="" value="Hombre" name="sexo"> Hombre
+                </label>
+              </div>
+              <div class="mujer">
+                <label for="mujer">
+                  <input id="mujer" type="radio" value="Mujer" name="sexo"> Mujer
+                </label>
+              </div>
+            </div>
+            <div class="intereses">
+              <div class="in1">
+                <label for="cotización">
+                  <input type="checkbox" checked="" name="intereses" value="cotizacion" id="cotización"> Cotización
+                </label>
+                <label for="reclamos">
+                  <input id="reclamos" type="checkbox" name="intereses" value="reclamos"> Reclamos
+                </label>
+              </div>
+              <div class="in2">
+                <label for="comentarios">
+                  <input id="comentarios" type="checkbox" name="intereses" value="comentarios"> Comentarios
+                </label>
+                <label for="otros">
+                  <input id="otros" type="checkbox" name="intereses" value="otros"> Otros
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="col2">
+            <label for="comentario">Comentarios:</label>
+            <textarea id="comentario" name="comentario" cols="25" rows="7"></textarea>
+            <div class="button-container">
+              <input type="submit" value="Enviar" class="button">
+            </div>
+          </div>
+        </form>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.7/hammer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.2/blazy.min.js"></script>
+    <script>(function() {
+  var $body, $burguerButton, $menu, bLazy, consulta, gestos, hideMenu, mediaQuery, showMenu, toggleMenu;
+
+  consulta = window.matchMedia('(max-width: 800px)');
+
+  toggleMenu = function() {
+    $menu.classList.toggle('active');
+  };
+
+  showMenu = function() {
+    $menu.classList.add('active');
+    $burguerButton.classList.add('icon-close');
+  };
+
+  hideMenu = function() {
+    $menu.classList.remove('active');
+    $burguerButton.classList.remove('icon-close');
+  };
+
+  mediaQuery = function() {
+    if (consulta.matches) {
+      console.log('se cumplió la condicion');
+      $burguerButton.addEventListener('touchstart', toggleMenu);
+    } else {
+      $burguerButton.removeEventListener('touchstart', toggleMenu);
+      console.log('no se cumplió la condicion');
+    }
+  };
+
+  consulta.addListener(mediaQuery);
+
+  $burguerButton = document.getElementById('burguer-button');
+
+  $menu = document.getElementById('menu');
+
+  mediaQuery();
+
+  bLazy = new Blazy({
+    selector: 'img',
+    breakpoints: [
+      {
+        width: 420,
+        src: 'data-src-small'
+      }
+    ],
+    success: function(element) {
+      setTimeout((function() {
+        var parent;
+        parent = element.parentNode;
+        parent.className = parent.className.replace(/\bloading\b/, '');
+      }), 200);
+    }
+  });
+
+  $body = document.body;
+
+  gestos = new Hammer($body);
+
+  gestos.on('swiperight', showMenu);
+
+  gestos.on('swipeleft', hideMenu);
+
+}).call(this);
+
+    </script>
+  </body>
+</html>

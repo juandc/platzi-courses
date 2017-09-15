@@ -1,0 +1,22 @@
+$darkorange = #D35400
+$orange = #E67E22
+$lightorange = #F39C12
+$yellow = #F1C40F
+$white = #ECF0F1
+$whitesmoke = #CCD3E8
+$black = #050511
+$bluegray = #3A3C42
+
+.header
+  background-color $lightorange
+  color $black
+  padding 20px
+  h1
+    margin-top 0
+  a
+    color $black
+    font-weight bold
+    text-decoration none
+    &:hover
+      text-decoration underline
+

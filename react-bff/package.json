@@ -1,0 +1,60 @@
+{
+  "name": "react-bff",
+  "version": "0.1.0",
+  "description": "Platzi React Course Clone",
+  "main": "server.js",
+  "scripts": {
+    "build": "webpack -w",
+    "serve": "serve ./build/static --port 3001 --cache 0",
+    "start": "node build/server/index",
+    "dev": "nodemon -e js,jsx build/server/index & npm run build & npm run serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juandc/react-bff.git"
+  },
+  "keywords": [
+    "react",
+    "reac-router",
+    "juandc",
+    "platzi"
+  ],
+  "author": "Juan David Castro <juandavidcastrogallego@gmail.com> (http://juandc.co/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juandc/react-bff/issues"
+  },
+  "homepage": "https://github.com/juandc/react-bff#readme",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-intl": "^2.2.0",
+    "react-router": "^4.0.0-alpha.6"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
+    "babel-preset-es2016": "^6.16.0",
+    "babel-preset-es2017": "^6.16.0",
+    "babel-preset-latest-minimal": "^1.1.2",
+    "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.26.1",
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.8.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "json-loader": "^0.5.4",
+    "nodemon": "^1.11.0",
+    "serve": "^2.1.2",
+    "style-loader": "^0.13.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.4.0",
+    "webpack": "^1.14.0"
+  }
+}

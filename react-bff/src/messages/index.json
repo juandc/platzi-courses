@@ -1,0 +1,26 @@
+{
+  "es": {
+    "user.title": "Perfil de: {name}",
+    "user.info": "Información Básica",
+    "user.address": "Dirección",
+    "user.website": "Página Web",
+    "post.readMore": "Ver más",
+    "post.comment.length": "Hay {comments} comentarios",
+    "notFound.msg": "No encontramos lo que buscabas...",
+    "notFound.link": "Volver a la Página principal",
+    "comment.author": "Por: <a href=\"mailto:{email}\" target=\"_blanck\">{name}</a>",
+    "loading": "Cargando datos..."
+  },
+  "en": {
+    "user.title": "Profile of: {name}",
+    "user.info": "Basic Info",
+    "user.address": "Address",
+    "user.website": "Website",
+    "post.readMore": "Read more",
+    "post.comment.length": "There are {comments} comments",
+    "notFound.msg": "We couldn't find what you were looking for...",
+    "notFound.link": "Go Back to Home",
+    "comment.author": "By: <a href=\"mailto:{email}\" target=\"_blanck\">{name}</a>",
+    "loading": "Loading Data..."
+  }
+}

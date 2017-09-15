@@ -1,0 +1,141 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    title Invie Next | Home
+    link(rel="stylesheet", href="css/style.min.css")
+    link(rel="shortcut icon", type="image/x-icon", href="images/favicon.png")
+  body
+    header.InvieHero(style="-webkit-background-size: cover;")
+      .u-wrapper
+        figure.InvieHero-logo
+          img(srcset="images/invie.png 1x, images/invie2x.png 2x" width="186" height="60" alt="Invie logotipo")
+        span#burguer-button.InvieHero-btn.icon-menu
+        nav#menu.InvieHero-nav
+          ul.InvieHero-menu
+            li.InvieHero-menu-item
+              a(href="/") Home
+            li.InvieHero-menu-item
+              a(href="#guitarras") Guitarras
+            li.InvieHero-menu-item
+              a(href="precios/") Precios
+        .InvieHero-copy
+          h1.InvieHero-copy-title Guitarras 
+            span invie
+            small .
+            |sibles
+          h3.InvieHero-copy-subtitle Sé la estrella de rock que siempre imaginaste ser
+          a.InvieHero-copy-btn(href="/#guitarras") Conoce más
+
+    section#guitarras.InvieGuitars.u-wrapper
+      h2.InvieGuitars-title Nuestras guitarras
+      .InvieGuitars-videos
+        .InvieGuitars-videoContainer
+          iframe.video(width="560" height="315" src="https://www.youtube.com/embed/qqZojEcpKWg" frameborder="0" allowfullscreen)
+      .u-scroll
+        article.u-scroll-itemContainer
+          .u-scroll-itemContent
+            img.InvieGuitars-item-img.b-lazy(data-src="images/invie-acustica.png|images/invie-acustica2x.png" width="250", alt="Guitarra Invie Acustica")
+            .InvieGuitars-item-container.u-scroll-item-container
+              h3.InvieGuitars-item-title.u-scroll-itemTitle Invie acustica
+              ol.InvieGuitars-item-list.u-scroll-itemList
+                li Estilo vintage
+                li Liviana
+                li Incluye estuche inviesible
+                  br 
+                  |de aluminio
+        article.u-scroll-itemContainer
+          .u-scroll-itemContent
+            img.InvieGuitars-item-img.b-lazy(data-src="images/invie-acustica.png|images/invie-classic2x.png"  width="250", alt="Guitarra Invie Clasica")
+            .InvieGuitars-item-container.u-scroll-item-container
+              h3.InvieGuitars-item-title.u-scroll-itemTitle Invie clasica
+              ol.InvieGuitars-item-list.u-scroll-itemList
+                li Estilo vintage
+                li Madera pura
+                li Inicia tu camino como 
+                  br
+                  |Rock Star
+        article.u-scroll-itemContainer
+          .u-scroll-itemContent
+            img.InvieGuitars-item-img.b-lazy(data-src='images/invie-rock.png|images/invie-rock2x.png', height="280" width="350", alt='Guitarra Invie Rock')
+            .InvieGuitars-item-container.u-scroll-item-container
+              h3.InvieGuitars-item-title.u-scroll-itemTitle Invie clasica
+              ol.InvieGuitars-item-list.u-scroll-itemList
+                li Estilo vintage
+                li Liviana
+                li Color madera claro y oscuro
+
+    footer.InvieFooter
+      .u-wrapper.InvieFooter-container
+        .InvieFooter-contact
+          img.InvieFooter-logo(src="", data-src="images/invie-white.png|images/invie-white2x.png" alt="logotipo blanco")
+          a.InvieFooter-link(href="tel:+57302446576") 
+            .icon-phone
+            strong Tel: 
+            span 302446576
+          a.InvieFooter-link(href="mailto:contact@invie.com")
+            .icon-envelope
+            strong Contacto: 
+            span c@invie.com
+        form.InvieFooter-form
+          .InvieFooter-form-column
+            .perinfo
+              .name
+                label.InvieFooter-form-label(for="nombre") Nombre:
+                input#nombre.InvieFooter-form-inpute.InvieFooter-form-input--text(type="text", required, name="nombre", placeholder="Tú Nombre")
+              .mail
+                label.InvieFooter-form-label(for="email") Email:
+                input#email.InvieFooter-form-input.InvieFooter-form-input--text(type="email", required, name="email",  placeholder="Tú Email")
+            .client
+              //- .hombre
+              label.InvieFooter-form-label(for="hombre") Hombre
+              input#hombre.InvieFooter-form-input.InvieFooter-form-input--radio(type="radio", checked, name="sexo", value="Hombre")
+              //- .mujer
+              label.InvieFooter-form-label(for="mujer") Mujer
+              input#mujer.InvieFooter-form-input.InvieFooter-form-input--radio(type="radio", name="sexo", value="Mujer")
+            .intereses
+              label.InvieFooter-form-label(for="cotizacion") Cotizacion
+                input#cotizacion.InvieFooter-form-input.InvieFooter-form-input--checkbox(type="checkbox", checked, name="intereses")
+              label.InvieFooter-form-label(for="reclamos") Reclamos
+                input#reclamos.InvieFooter-form-input.InvieFooter-form-input--checkbox(type="checkbox", name="intereses", value="reclamos")
+              label.InvieFooter-form-label(for="comentarios") Comentarios
+                input#comentarios.InvieFooter-form-input.InvieFooter-form-input--checkbox(type="checkbox", name="intereses", value="comentarios")
+              label.InvieFooter-form-label(for="otros") Otros
+                input#otros.InvieFooter-form-input.InvieFooter-form-input--checkbox(type="checkbox", name="intereses", value="otros")
+          .InvieFooter-form-column
+            label.InvieFooter-form-label(for="comentarios") Comentarios
+            textarea#comentarios.InvieFooter-form-input.InvieFooter-form-input.InvieFooter-form-input--textarea(name="comentarios", cols="30", rows="7")
+            input.InvieFooter-form-btn(type="submit", value="Enviar")
+
+
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.7/hammer.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/blazy/1.5.4/blazy.min.js')
+    script.
+      var consulta, $burguerButton, $menu, $body, gestos
+
+      consulta = window.matchMedia('(max-width: 1023px)')
+      consulta.addListener(mediaQuery)
+      $burguerButton = document.getElementById('burguer-button')
+      $menu = document.getElementById('menu')
+
+      function toggleMenu(){ $menu.classList.toggle('active') }
+      function showMenu(){ $menu.classList.add('active') }
+      function hideMenu(){ $menu.classList.remove('active') }
+      function mediaQuery() {
+        if (consulta.matches) $burguerButton.addEventListener('touchstart', toggleMenu)
+        else $burguerButton.removeEventListener('touchstart', toggleMenu)
+      }
+      mediaQuery()
+
+      // lazy loading
+      var bLazy = new Blazy ({
+        selector: 'img'
+      })
+
+      // Hammer
+      $body = document.body
+      gestos = new Hammer($body)
+      gestos.on('swipeleft', hideMenu)
+      gestos.on('swiperight', showMenu)

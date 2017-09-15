@@ -2,7 +2,7 @@
 Platzi Testing Courses Repository
 
 
-- [React Backed for Frontend](//github.com/sergiodxa/react-course-project): [juandc.co/platzi/react-bff](//github.com/juandc/platzi-courses/react-bff)
+- [React Backed for Frontend](//github.com/sergiodxa/react-course-project): [github.com/react-bff](//github.com/juandc/platzi-courses/react-bff)
 - [Invie](//github.com/platzi/invie-responsive): [juandc.co/platzi/invie](http://juandc.co/platzi-courses/invie)
 - [Invie Next](//github.com/platzi/invie-responsive): [juandc.co/platzi/invie-next](http://juandc.co/platzi-courses/invie-next/public)
 - Desarrollo Web 2016: [juandc.co/platzi/desarrollo-web](http://juandc.co/platzi-courses/desarrollo-web)

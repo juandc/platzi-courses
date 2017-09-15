@@ -7,4 +7,5 @@ Platzi Testing Courses Repository
 - [Invie Next](//github.com/platzi/invie-responsive): [juandc.co/platzi/invie-next](http://juandc.co/platzi-courses/invie-next/public)
 - Desarrollo Web 2016: [juandc.co/platzi/desarrollo-web](http://juandc.co/platzi-courses/desarrollo-web)
 - [Sfotipy](https://platzi.com/sfotipy/): [juandc.co/platzi/sfotipy](http://juandc.co/platzi-courses/sfotipy)
+- Python y Django 2016: [github.com/juandc/python-django](//github.com/juandc/platzi-courses/tree/master/Python-Django-2016)
 
